@@ -37,14 +37,14 @@ const MovieDetails = () => {
   const location = useLocation();
 
   useEffect(() => {
-    fetchMovieById(movieId).then(r => setmMovieInfo(r));
+    fetchMovieById(movieId).then(r => setmMovieInfo(r.data));
   }, [movieId]);
 
   if (!movieInfo) {
     return;
   }
 
-  const { poster_path, title, vote_average, overview, genres } = movieInfo.data;
+  const { poster_path, title, vote_average, overview, genres } = movieInfo;
   const genreNames = genres.map(genre => genre.name).join(', ');
   const BackLinkHref = location.state?.from ?? '/';
 
