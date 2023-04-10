@@ -68,12 +68,12 @@ const MovieDetails = () => {
       <AdditionalBox>
         <AddInfoList>
           <AddInfoItem>
-            <Link to="cast" state={{ from: location.state.from }}>
+            <Link to="cast" state={{ from: location.state }}>
               Cast
             </Link>
           </AddInfoItem>
           <AddInfoItem>
-            <Link to="reviews" state={{ from: location.state.from }}>
+            <Link to="reviews" state={{ from: location.state }}>
               Reviews
             </Link>
           </AddInfoItem>
